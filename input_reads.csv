@@ -1,0 +1,3 @@
+# Input read file with three comma separated columns: sample, reads, mode (hifi or ont); where sample is the name of the sample to use in output files, reads is the path to the hifi or ont reads, and mode specifies whether they are hifi or ont reads.
+# lines starting with # are ignored
+sample_name,path/to/sequence_data.fastq,hifi
