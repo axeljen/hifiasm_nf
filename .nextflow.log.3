@@ -1,0 +1,285 @@
+Sep-17 15:22:30.833 [main] DEBUG nextflow.cli.Launcher - $> nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+Sep-17 15:22:31.150 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.2
+Sep-17 15:22:31.214 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cfs/klemming/home/a/axeljen/.nextflow/plugins; core-plugins: nf-amazon@2.5.2,nf-azure@1.6.0,nf-cloudcache@0.4.1,nf-codecommit@0.2.0,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2,nf-tower@1.9.1,nf-wave@1.4.2
+Sep-17 15:22:31.256 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-17 15:22:31.258 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-17 15:22:31.265 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.10.0 in 'deployment' mode
+Sep-17 15:22:31.313 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-17 15:22:31.424 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/nextflow.config
+Sep-17 15:22:31.429 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/nextflow.config
+Sep-17 15:22:31.617 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cfs/klemming/home/a/axeljen/.nextflow/secrets/store.json
+Sep-17 15:22:31.625 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@ea9e141] - activable => nextflow.secret.LocalSecretsProvider@ea9e141
+Sep-17 15:22:31.645 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+Sep-17 15:22:33.394 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+Sep-17 15:22:33.495 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Sep-17 15:22:33.508 [main] DEBUG nextflow.cli.CmdRun - Launching `run_hifiasm.nf` [loquacious_pesquet] DSL2 - revision: 7326d0af35
+Sep-17 15:22:33.511 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-17 15:22:33.512 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sep-17 15:22:33.704 [main] DEBUG nextflow.Session - Session UUID: 2bf45648-0373-4a48-bad9-c7ebee696608
+Sep-17 15:22:33.705 [main] DEBUG nextflow.Session - Run name: loquacious_pesquet
+Sep-17 15:22:33.732 [main] DEBUG nextflow.Session - Executor pool size: 256
+Sep-17 15:22:33.751 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sep-17 15:22:33.768 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=768; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-17 15:22:33.896 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.2 build 5914
+  Created: 29-05-2024 06:19 UTC (08:19 CEST)
+  System: Linux 5.14.21-150500.55.65_13.0.73-cray_shasta_c
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 17.0.4+8
+  Encoding: UTF-8 (UTF-8)
+  Process: 1723556@login1 [10.253.0.5]
+  CPUs: 256 - Mem: 502.2 GB (71.2 GB) - Swap: 0 (0)
+Sep-17 15:22:33.947 [main] DEBUG nextflow.Session - Work-dir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work [lustre]
+Sep-17 15:22:34.115 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[GoogleLifeSciencesExecutor, AwsBatchExecutor, GoogleBatchExecutor]
+Sep-17 15:22:34.166 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-17 15:22:34.172 [main] DEBUG nextflow.Session - Observer factory: WaveFactory
+Sep-17 15:22:34.173 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Sep-17 15:22:34.212 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-17 15:22:34.263 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 257; maxThreads: 1000
+Sep-17 15:22:34.546 [main] DEBUG nextflow.Session - Session start
+Sep-17 15:22:35.309 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-17 15:22:36.524 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 15:22:36.524 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 15:22:36.540 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Sep-17 15:22:36.551 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Sep-17 15:22:36.553 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Sep-17 15:22:36.556 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Sep-17 15:22:36.633 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 15:22:36.634 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 15:22:36.649 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 15:22:36.650 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 15:22:36.658 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 15:22:36.658 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 15:22:36.681 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 15:22:36.681 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 15:22:36.736 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 15:22:36.737 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 15:22:36.754 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: asmStats, runHifiasm, gfa2fa, busco, merqury, merylCounts
+Sep-17 15:22:36.757 [main] DEBUG nextflow.Session - Igniting dataflow network (7)
+Sep-17 15:22:36.790 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > runHifiasm
+Sep-17 15:22:36.792 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > merylCounts
+Sep-17 15:22:36.797 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > gfa2fa
+Sep-17 15:22:36.799 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > asmStats
+Sep-17 15:22:36.799 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > merqury
+Sep-17 15:22:36.800 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > busco
+Sep-17 15:22:36.807 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_e8920363d3658da2: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/gfa2fa.nf
+  Script_3e1ab50b3f6f5c40: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/busco.nf
+  Script_4a81693e2d3e34dc: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/merqury.nf
+  Script_deb9903e1044ac9c: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/hifiasm.nf
+  Script_7eb68dffa41a46fa: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/meryl.nf
+  Script_1747942d5eb1cdcb: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/asm_stats.nf
+  Script_d8e474b4cc9b3a5e: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/run_hifiasm.nf
+Sep-17 15:22:36.807 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sep-17 15:22:36.807 [main] DEBUG nextflow.Session - Session await
+Sep-17 15:22:37.062 [Actor Thread 27] DEBUG i.s.wave.plugin.config.WaveConfig - Wave strategy not specified - using default: [container, dockerfile, conda, spack]
+Sep-17 15:22:37.075 [Actor Thread 27] DEBUG io.seqera.wave.plugin.WaveClient - Wave config: WaveConfig(enabled:null, endpoint:https://wave.seqera.io, containerConfigUrl:[], tokensCacheMaxDuration:30m, condaOpts:CondaOpts(mambaImage=mambaorg/micromamba:1.5.8-lunar; basePackages=conda-forge::procps-ng, commands=null), spackOpts:SpackOpts(basePackages=null, commands=null), strategy:[container, dockerfile, conda, spack], bundleProjectResources:null, buildRepository:null, cacheRepository:null, retryOpts:RetryOpts(delay:450ms, maxDelay:1m 30s, maxAttempts:10, jitter:0.25), httpClientOpts:HttpOpts(), freezeMode:null, preserveFileTimestamp:null)
+Sep-17 15:22:37.573 [Actor Thread 32] WARN  nextflow.container.SingularityCache - Singularity cache directory has not been defined -- Remote image will be stored in the path: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/singularity -- Use the environment variable NXF_SINGULARITY_CACHEDIR to specify a different location
+Sep-17 15:22:37.576 [Actor Thread 32] INFO  nextflow.container.SingularityCache - Pulling Singularity image docker://busco_hifiasm_merqury_meryl:1ab574004708b191 [cache /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/singularity/busco_hifiasm_merqury_meryl-1ab574004708b191.img]
+Sep-17 15:22:40.374 [Actor Thread 25] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=runHifiasm (2); work-dir=null
+  error [java.lang.IllegalStateException]: java.lang.IllegalStateException: Failed to pull singularity image
+  command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+  status : 255
+  hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+  message:
+    FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+Sep-17 15:22:40.374 [Actor Thread 29] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=merylCounts (3); work-dir=null
+  error [java.lang.IllegalStateException]: java.lang.IllegalStateException: Failed to pull singularity image
+  command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+  status : 255
+  hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+  message:
+    FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+Sep-17 15:22:40.379 [Actor Thread 26] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=merylCounts (2); work-dir=null
+  error [java.lang.IllegalStateException]: java.lang.IllegalStateException: Failed to pull singularity image
+  command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+  status : 255
+  hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+  message:
+    FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+Sep-17 15:22:40.385 [Actor Thread 17] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=merylCounts; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Sep-17 15:22:40.388 [Actor Thread 21] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=merylCounts (1); work-dir=null
+  error [java.lang.IllegalStateException]: java.lang.IllegalStateException: Failed to pull singularity image
+  command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+  status : 255
+  hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+  message:
+    FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+Sep-17 15:22:40.405 [Actor Thread 25] ERROR nextflow.processor.TaskProcessor - Error executing process > 'runHifiasm (2)'
+
+Caused by:
+  Failed to pull singularity image
+    command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+    status : 255
+    hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+    message:
+      FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+
+java.lang.IllegalStateException: java.lang.IllegalStateException: Failed to pull singularity image
+  command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+  status : 255
+  hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+  message:
+    FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+	at nextflow.container.SingularityCache.getCachePathFor(SingularityCache.groovy:356)
+	at nextflow.container.ContainerHandler.createSingularityCache(ContainerHandler.groovy:108)
+	at nextflow.container.ContainerHandler.normalizeImageName(ContainerHandler.groovy:75)
+	at nextflow.container.resolver.DefaultContainerResolver.resolveImage0(DefaultContainerResolver.groovy:49)
+	at nextflow.container.resolver.DefaultContainerResolver.resolveImage(DefaultContainerResolver.groovy:42)
+	at io.seqera.wave.plugin.resolver.WaveContainerResolver.resolveImage(WaveContainerResolver.groovy:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.processor.TaskRun.containerInfo0(TaskRun.groovy:685)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnCurrentN(ScriptBytecodeAdapter.java:96)
+	at nextflow.processor.TaskRun.this$dist$invoke$1(TaskRun.groovy)
+	at nextflow.processor.TaskRun$4.methodMissing(TaskRun.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaClassImpl.invokeMissingMethod(MetaClassImpl.java:924)
+	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1413)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1335)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.processor.TaskRun$4.apply(TaskRun.groovy:670)
+	at nextflow.processor.TaskRun$4.apply(TaskRun.groovy)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.processor.TaskRun.containerInfo(TaskRun.groovy:667)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.processor.TaskRun.getContainer(TaskRun.groovy:693)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.processor.TaskRun.isContainerEnabled(TaskRun.groovy:738)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.processor.TaskProcessor.createTaskHashKey(TaskProcessor.groovy:2193)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.processor.TaskProcessor.invokeTask(TaskProcessor.groovy:659)
+	at nextflow.processor.InvokeTaskAdapter.call(InvokeTaskAdapter.groovy:52)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.startTask(DataflowOperatorActor.java:120)
+	at groovyx.gpars.dataflow.operator.ForkingDataflowOperatorActor.access$001(ForkingDataflowOperatorActor.java:35)
+	at groovyx.gpars.dataflow.operator.ForkingDataflowOperatorActor$1.run(ForkingDataflowOperatorActor.java:58)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalStateException: Failed to pull singularity image
+  command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+  status : 255
+  hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+  message:
+    FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+	at nextflow.container.SingularityCache.runCommand(SingularityCache.groovy:308)
+	at nextflow.container.SingularityCache.downloadContainerImage0(SingularityCache.groovy:275)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.container.SingularityCache$_downloadContainerImage_closure1.doCall(SingularityCache.groovy:243)
+	at nextflow.container.SingularityCache$_downloadContainerImage_closure1.call(SingularityCache.groovy)
+	at nextflow.file.FileMutex.lock(FileMutex.groovy:106)
+	at nextflow.container.SingularityCache.downloadContainerImage(SingularityCache.groovy:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.container.SingularityCache$_getLazyImagePath_closure2.doCall(SingularityCache.groovy:333)
+	at nextflow.container.SingularityCache$_getLazyImagePath_closure2.call(SingularityCache.groovy)
+	at groovyx.gpars.dataflow.LazyDataflowVariable$1.run(LazyDataflowVariable.java:70)
+	... 3 common frames omitted
+Sep-17 15:22:40.415 [Actor Thread 25] DEBUG nextflow.Session - Session aborted -- Cause: java.lang.IllegalStateException: Failed to pull singularity image
+  command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+  status : 255
+  hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+  message:
+    FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+Sep-17 15:22:40.443 [Actor Thread 25] DEBUG nextflow.Session - The following nodes are still active:
+[process] runHifiasm
+  status=ACTIVE
+  port 0: (queue) closed; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] gfa2fa
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] asmStats
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] merqury
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] busco
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+Sep-17 15:22:40.448 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sep-17 15:22:40.448 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Sep-17 15:22:40.449 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-17 15:22:40.452 [Actor Thread 18] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=runHifiasm; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Sep-17 15:22:40.453 [Actor Thread 27] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=runHifiasm (3); work-dir=null
+  error [java.lang.IllegalStateException]: java.lang.IllegalStateException: Failed to pull singularity image
+  command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+  status : 255
+  hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+  message:
+    FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+Sep-17 15:22:40.454 [Actor Thread 22] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=runHifiasm (1); work-dir=null
+  error [java.lang.IllegalStateException]: java.lang.IllegalStateException: Failed to pull singularity image
+  command: singularity pull  --name busco_hifiasm_merqury_meryl-1ab574004708b191.img.pulling.1758115357577 docker://busco_hifiasm_merqury_meryl:1ab574004708b191 > /dev/null
+  status : 255
+  hint   : Try and increase singularity.pullTimeout in the config (current is "20m")
+  message:
+    FATAL:   While making image from oci registry: error fetching image to cache: failed to get checksum for docker://busco_hifiasm_merqury_meryl:1ab574004708b191: reading manifest 1ab574004708b191 in docker.io/library/busco_hifiasm_merqury_meryl: requested access to the resource is denied
+
+Sep-17 15:22:40.462 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Sep-17 15:22:40.668 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-17 15:22:40.718 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

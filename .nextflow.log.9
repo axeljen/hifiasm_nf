@@ -1,0 +1,264 @@
+Sep-17 10:54:03.888 [main] DEBUG nextflow.cli.Launcher - $> nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+Sep-17 10:54:04.123 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.2
+Sep-17 10:54:04.160 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cfs/klemming/home/a/axeljen/.nextflow/plugins; core-plugins: nf-amazon@2.5.2,nf-azure@1.6.0,nf-cloudcache@0.4.1,nf-codecommit@0.2.0,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2,nf-tower@1.9.1,nf-wave@1.4.2
+Sep-17 10:54:04.179 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-17 10:54:04.181 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-17 10:54:04.186 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.10.0 in 'deployment' mode
+Sep-17 10:54:04.210 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-17 10:54:04.250 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/nextflow.config
+Sep-17 10:54:04.255 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/nextflow.config
+Sep-17 10:54:04.334 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cfs/klemming/home/a/axeljen/.nextflow/secrets/store.json
+Sep-17 10:54:04.340 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@ea9e141] - activable => nextflow.secret.LocalSecretsProvider@ea9e141
+Sep-17 10:54:04.363 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+Sep-17 10:54:05.684 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+Sep-17 10:54:05.735 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Sep-17 10:54:05.745 [main] DEBUG nextflow.cli.CmdRun - Launching `run_hifiasm.nf` [desperate_bhabha] DSL2 - revision: 7326d0af35
+Sep-17 10:54:05.747 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-17 10:54:05.748 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sep-17 10:54:05.838 [main] DEBUG nextflow.Session - Session UUID: 9419a301-2514-4a87-bb8f-ad796c95dab0
+Sep-17 10:54:05.839 [main] DEBUG nextflow.Session - Run name: desperate_bhabha
+Sep-17 10:54:05.840 [main] DEBUG nextflow.Session - Executor pool size: 256
+Sep-17 10:54:05.853 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sep-17 10:54:05.862 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=768; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-17 10:54:05.903 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.2 build 5914
+  Created: 29-05-2024 06:19 UTC (08:19 CEST)
+  System: Linux 5.14.21-150500.55.65_13.0.73-cray_shasta_c
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 17.0.4+8
+  Encoding: UTF-8 (UTF-8)
+  Process: 2726532@login1 [10.253.0.5]
+  CPUs: 256 - Mem: 502.2 GB (130 GB) - Swap: 0 (0)
+Sep-17 10:54:05.957 [main] DEBUG nextflow.Session - Work-dir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work [lustre]
+Sep-17 10:54:06.039 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[GoogleLifeSciencesExecutor, AwsBatchExecutor, GoogleBatchExecutor]
+Sep-17 10:54:06.062 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-17 10:54:06.069 [main] DEBUG nextflow.Session - Observer factory: WaveFactory
+Sep-17 10:54:06.070 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Sep-17 10:54:06.120 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-17 10:54:06.137 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 257; maxThreads: 1000
+Sep-17 10:54:06.243 [main] DEBUG nextflow.Session - Session start
+Sep-17 10:54:06.732 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-17 10:54:07.714 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 10:54:07.715 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 10:54:07.796 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Sep-17 10:54:07.812 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Sep-17 10:54:07.818 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Sep-17 10:54:07.822 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Sep-17 10:54:07.992 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 10:54:07.993 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 10:54:08.031 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 10:54:08.032 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 10:54:08.052 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 10:54:08.052 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 10:54:08.095 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 10:54:08.096 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 10:54:08.110 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Sep-17 10:54:08.110 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Sep-17 10:54:08.118 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: asmStats, runHifiasm, gfa2fa, busco, merqury, merylCounts
+Sep-17 10:54:08.122 [main] DEBUG nextflow.Session - Igniting dataflow network (7)
+Sep-17 10:54:08.135 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > runHifiasm
+Sep-17 10:54:08.136 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > merylCounts
+Sep-17 10:54:08.136 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > gfa2fa
+Sep-17 10:54:08.137 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > asmStats
+Sep-17 10:54:08.137 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > merqury
+Sep-17 10:54:08.138 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > busco
+Sep-17 10:54:08.140 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_8895a2ffce35afd9: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/merqury.nf
+  Script_33be26448a676bda: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/busco.nf
+  Script_9e018d28ade607bf: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/gfa2fa.nf
+  Script_0e778947b5013ffc: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/hifiasm.nf
+  Script_d310f63ebeeac583: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/meryl.nf
+  Script_d8e474b4cc9b3a5e: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/run_hifiasm.nf
+  Script_ed87e3c32c170eb2: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/./modules/asm_stats.nf
+Sep-17 10:54:08.141 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sep-17 10:54:08.141 [main] DEBUG nextflow.Session - Session await
+Sep-17 10:54:08.383 [Actor Thread 33] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/cfs/klemming/projects/supr/snic2022-6-144/AXEL/software/miniforge/envs/assembly_env; path=/cfs/klemming/projects/supr/snic2022-6-144/AXEL/software/miniforge/envs/assembly_env
+Sep-17 10:54:08.472 [Actor Thread 21] DEBUG i.s.wave.plugin.config.WaveConfig - Wave strategy not specified - using default: [container, dockerfile, conda, spack]
+Sep-17 10:54:08.481 [Actor Thread 21] DEBUG io.seqera.wave.plugin.WaveClient - Wave config: WaveConfig(enabled:null, endpoint:https://wave.seqera.io, containerConfigUrl:[], tokensCacheMaxDuration:30m, condaOpts:CondaOpts(mambaImage=mambaorg/micromamba:1.5.8-lunar; basePackages=conda-forge::procps-ng, commands=null), spackOpts:SpackOpts(basePackages=null, commands=null), strategy:[container, dockerfile, conda, spack], bundleProjectResources:null, buildRepository:null, cacheRepository:null, retryOpts:RetryOpts(delay:450ms, maxDelay:1m 30s, maxAttempts:10, jitter:0.25), httpClientOpts:HttpOpts(), freezeMode:null, preserveFileTimestamp:null)
+Sep-17 10:54:08.822 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process merylCounts (1) > jobId: 12330711; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/14/212d2f36b8d3cb452f24bb33fee724
+Sep-17 10:54:08.823 [Task submitter] INFO  nextflow.Session - [14/212d2f] Submitted process > merylCounts (1)
+Sep-17 10:54:08.905 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process runHifiasm (1) > jobId: 12330712; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/30/8d67a77b553df855f479b261df7318
+Sep-17 10:54:08.905 [Task submitter] INFO  nextflow.Session - [30/8d67a7] Submitted process > runHifiasm (1)
+Sep-17 10:54:08.953 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process runHifiasm (3) > jobId: 12330713; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/45/ac6b35e031ac0b31178dd24b5b31ad
+Sep-17 10:54:08.954 [Task submitter] INFO  nextflow.Session - [45/ac6b35] Submitted process > runHifiasm (3)
+Sep-17 10:54:09.008 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process runHifiasm (2) > jobId: 12330714; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/e4/caa7aa16e525f1390bee9d7f4cf311
+Sep-17 10:54:09.009 [Task submitter] INFO  nextflow.Session - [e4/caa7aa] Submitted process > runHifiasm (2)
+Sep-17 10:54:09.056 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process merylCounts (2) > jobId: 12330715; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/42/8ccdcfda45507b9e6dab53f26bf2fb
+Sep-17 10:54:09.056 [Task submitter] INFO  nextflow.Session - [42/8ccdcf] Submitted process > merylCounts (2)
+Sep-17 10:54:09.098 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process merylCounts (3) > jobId: 12330716; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/7c/96c94f6e422a4cf5291b136790a142
+Sep-17 10:54:09.100 [Task submitter] INFO  nextflow.Session - [7c/96c94f] Submitted process > merylCounts (3)
+Sep-17 10:54:27.838 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330716; id: 6; name: merylCounts (3); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/7c/96c94f6e422a4cf5291b136790a142 started: 1758099252891; exited: 2025-09-17T08:54:22Z; ]
+Sep-17 10:54:27.839 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=768; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-17 10:54:27.887 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=768; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-17 10:54:47.837 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330711; id: 1; name: merylCounts (1); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/14/212d2f36b8d3cb452f24bb33fee724 started: 1758099252829; exited: 2025-09-17T08:54:45Z; ]
+Sep-17 10:54:47.844 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330715; id: 4; name: merylCounts (2); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/42/8ccdcfda45507b9e6dab53f26bf2fb started: 1758099252886; exited: 2025-09-17T08:54:46Z; ]
+Sep-17 10:55:07.841 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330714; id: 3; name: runHifiasm (2); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/e4/caa7aa16e525f1390bee9d7f4cf311 started: 1758099252881; exited: 2025-09-17T08:55:03Z; ]
+Sep-17 10:55:07.952 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process gfa2fa (3) > jobId: 12330931; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/c1/ea9dd5e611737c9b52a87e2b3e19a9
+Sep-17 10:55:07.952 [Task submitter] INFO  nextflow.Session - [c1/ea9dd5] Submitted process > gfa2fa (3)
+Sep-17 10:55:08.001 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process gfa2fa (2) > jobId: 12330932; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/ad/69c05cbd9f0051b1691bba8d71c24a
+Sep-17 10:55:08.002 [Task submitter] INFO  nextflow.Session - [ad/69c05c] Submitted process > gfa2fa (2)
+Sep-17 10:55:08.074 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process gfa2fa (1) > jobId: 12330933; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/94/124a15bb750e3c90d59da536332f8c
+Sep-17 10:55:08.075 [Task submitter] INFO  nextflow.Session - [94/124a15] Submitted process > gfa2fa (1)
+Sep-17 10:55:12.843 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330712; id: 2; name: runHifiasm (1); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/30/8d67a77b553df855f479b261df7318 started: 1758099252874; exited: 2025-09-17T08:55:10Z; ]
+Sep-17 10:55:12.965 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process gfa2fa (6) > jobId: 12330949; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/ed/c232c03e039c7082f617c4e4deef8c
+Sep-17 10:55:12.965 [Task submitter] INFO  nextflow.Session - [ed/c232c0] Submitted process > gfa2fa (6)
+Sep-17 10:55:13.034 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process gfa2fa (4) > jobId: 12330950; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/6e/310cdac518aa7092ccc02498bae59e
+Sep-17 10:55:13.035 [Task submitter] INFO  nextflow.Session - [6e/310cda] Submitted process > gfa2fa (4)
+Sep-17 10:55:13.107 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process gfa2fa (5) > jobId: 12330951; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/c7/1269334a51e92f08d7bbf85500ffde
+Sep-17 10:55:13.108 [Task submitter] INFO  nextflow.Session - [c7/126933] Submitted process > gfa2fa (5)
+Sep-17 10:55:22.860 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330713; id: 5; name: runHifiasm (3); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/45/ac6b35e031ac0b31178dd24b5b31ad started: 1758099252877; exited: 2025-09-17T08:55:22Z; ]
+Sep-17 10:55:23.082 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process gfa2fa (7) > jobId: 12330954; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/6d/12d9569582bf608e3267d9714701e1
+Sep-17 10:55:23.083 [Task submitter] INFO  nextflow.Session - [6d/12d956] Submitted process > gfa2fa (7)
+Sep-17 10:55:23.170 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process gfa2fa (9) > jobId: 12330955; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/26/79510ac08d9ace116cea3e9ae53ca9
+Sep-17 10:55:23.171 [Task submitter] INFO  nextflow.Session - [26/79510a] Submitted process > gfa2fa (9)
+Sep-17 10:55:23.284 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process gfa2fa (8) > jobId: 12330956; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/6e/153661e3fe2979477764c447e25724
+Sep-17 10:55:23.285 [Task submitter] INFO  nextflow.Session - [6e/153661] Submitted process > gfa2fa (8)
+Sep-17 10:55:27.868 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330950; id: 10; name: gfa2fa (4); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/6e/310cdac518aa7092ccc02498bae59e started: 1758099317869; exited: 2025-09-17T08:55:26Z; ]
+Sep-17 10:55:27.880 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330951; id: 11; name: gfa2fa (5); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/c7/1269334a51e92f08d7bbf85500ffde started: 1758099317871; exited: 2025-09-17T08:55:25Z; ]
+Sep-17 10:55:28.016 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process asmStats (2) > jobId: 12330958; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/a0/0d9d84b4af91e16c47bb82d34a1591
+Sep-17 10:55:28.017 [Task submitter] INFO  nextflow.Session - [a0/0d9d84] Submitted process > asmStats (2)
+Sep-17 10:55:28.079 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process asmStats (1) > jobId: 12330959; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/9d/61b301354d3ecea3d1d842540368b1
+Sep-17 10:55:28.079 [Task submitter] INFO  nextflow.Session - [9d/61b301] Submitted process > asmStats (1)
+Sep-17 10:55:28.133 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process busco (1) > jobId: 12330960; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/2a/3a37cff854fa057a685304963af8b7
+Sep-17 10:55:28.133 [Task submitter] INFO  nextflow.Session - [2a/3a37cf] Submitted process > busco (1)
+Sep-17 10:55:28.192 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process busco (2) > jobId: 12330961; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/cb/fa64dc49d839a3840842291a40a334
+Sep-17 10:55:28.192 [Task submitter] INFO  nextflow.Session - [cb/fa64dc] Submitted process > busco (2)
+Sep-17 10:55:32.864 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330931; id: 9; name: gfa2fa (3); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/c1/ea9dd5e611737c9b52a87e2b3e19a9 started: 1758099312845; exited: 2025-09-17T08:55:29Z; ]
+Sep-17 10:55:32.885 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330932; id: 8; name: gfa2fa (2); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/ad/69c05cbd9f0051b1691bba8d71c24a started: 1758099312849; exited: 2025-09-17T08:55:28Z; ]
+Sep-17 10:55:32.894 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330933; id: 7; name: gfa2fa (1); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/94/124a15bb750e3c90d59da536332f8c started: 1758099312851; exited: 2025-09-17T08:55:29Z; ]
+Sep-17 10:55:32.897 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330949; id: 12; name: gfa2fa (6); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/ed/c232c03e039c7082f617c4e4deef8c started: 1758099317867; exited: 2025-09-17T08:55:30Z; ]
+Sep-17 10:55:32.958 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process busco (3) > jobId: 12330962; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/d9/367d8abe43e1f86aee6c11b2024bcc
+Sep-17 10:55:32.959 [Task submitter] INFO  nextflow.Session - [d9/367d8a] Submitted process > busco (3)
+Sep-17 10:55:35.170 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process asmStats (3) > jobId: 12331106; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/4f/adaf32121fb7882d13f5a599db1e81
+Sep-17 10:55:35.171 [Task submitter] INFO  nextflow.Session - [4f/adaf32] Submitted process > asmStats (3)
+Sep-17 10:55:35.271 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process asmStats (4) > jobId: 12331107; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/46/a2504b448ebce1ab81db5258d3edc8
+Sep-17 10:55:35.271 [Task submitter] INFO  nextflow.Session - [46/a2504b] Submitted process > asmStats (4)
+Sep-17 10:55:35.333 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process busco (4) > jobId: 12331108; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/a1/4a98b3456e5e151713cf74563e2d07
+Sep-17 10:55:35.334 [Task submitter] INFO  nextflow.Session - [a1/4a98b3] Submitted process > busco (4)
+Sep-17 10:55:35.380 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process asmStats (5) > jobId: 12331109; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/48/4673c346f810116c9d9da1bf2ffa37
+Sep-17 10:55:35.381 [Task submitter] INFO  nextflow.Session - [48/4673c3] Submitted process > asmStats (5)
+Sep-17 10:55:35.431 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process busco (6) > jobId: 12331110; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/91/a460d6ba3d59e48df80a0877db9430
+Sep-17 10:55:35.432 [Task submitter] INFO  nextflow.Session - [91/a460d6] Submitted process > busco (6)
+Sep-17 10:55:35.480 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process asmStats (6) > jobId: 12331111; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/6b/64f37154d65eb9f245102328fa88d6
+Sep-17 10:55:35.481 [Task submitter] INFO  nextflow.Session - [6b/64f371] Submitted process > asmStats (6)
+Sep-17 10:55:35.530 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process busco (5) > jobId: 12331112; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/2c/3ddb901d5dcbe2efe6c573eece4c4a
+Sep-17 10:55:35.531 [Task submitter] INFO  nextflow.Session - [2c/3ddb90] Submitted process > busco (5)
+Sep-17 10:55:37.848 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330954; id: 13; name: gfa2fa (7); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/6d/12d9569582bf608e3267d9714701e1 started: 1758099327882; exited: 2025-09-17T08:55:37Z; ]
+Sep-17 10:55:37.853 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330955; id: 15; name: gfa2fa (9); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/26/79510ac08d9ace116cea3e9ae53ca9 started: 1758099327920; exited: 2025-09-17T08:55:34Z; ]
+Sep-17 10:55:37.857 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330956; id: 14; name: gfa2fa (8); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/6e/153661e3fe2979477764c447e25724 started: 1758099327924; exited: 2025-09-17T08:55:33Z; ]
+Sep-17 10:55:37.924 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process asmStats (7) > jobId: 12331113; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/a9/fb54e08e27b3903742ce8b89604ce3
+Sep-17 10:55:37.925 [Task submitter] INFO  nextflow.Session - [a9/fb54e0] Submitted process > asmStats (7)
+Sep-17 10:55:37.984 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process busco (7) > jobId: 12331114; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/47/29e9132b8efb084054fdd75fd95859
+Sep-17 10:55:37.985 [Task submitter] INFO  nextflow.Session - [47/29e913] Submitted process > busco (7)
+Sep-17 10:55:38.041 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process asmStats (8) > jobId: 12331115; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/5c/93122fe463d79e1a07a0e1f8a22164
+Sep-17 10:55:38.042 [Task submitter] INFO  nextflow.Session - [5c/93122f] Submitted process > asmStats (8)
+Sep-17 10:55:38.082 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process busco (8) > jobId: 12331116; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/f4/8639fa1269ef29cd2461e594bdb1a5
+Sep-17 10:55:38.083 [Task submitter] INFO  nextflow.Session - [f4/8639fa] Submitted process > busco (8)
+Sep-17 10:55:38.135 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process asmStats (9) > jobId: 12331117; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/59/ab2a6335b38885690ed2ecd9314b90
+Sep-17 10:55:38.136 [Task submitter] INFO  nextflow.Session - [59/ab2a63] Submitted process > asmStats (9)
+Sep-17 10:55:38.189 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process busco (9) > jobId: 12331118; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/04/a763fc3850c1d0587bc485eec34795
+Sep-17 10:55:38.190 [Task submitter] INFO  nextflow.Session - [04/a763fc] Submitted process > busco (9)
+Sep-17 10:55:38.237 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process merqury (2) > jobId: 12331119; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/06/ce2765cb76907df0c6b644e08a1b30
+Sep-17 10:55:38.237 [Task submitter] INFO  nextflow.Session - [06/ce2765] Submitted process > merqury (2)
+Sep-17 10:55:38.287 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process merqury (1) > jobId: 12331120; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/da/f2f8bdd571958f39b13c51acf2d80a
+Sep-17 10:55:38.288 [Task submitter] INFO  nextflow.Session - [da/f2f8bd] Submitted process > merqury (1)
+Sep-17 10:55:38.334 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process merqury (3) > jobId: 12331121; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/1e/c15bc1fb74dfb8435ddbc3710126fb
+Sep-17 10:55:38.335 [Task submitter] INFO  nextflow.Session - [1e/c15bc1] Submitted process > merqury (3)
+Sep-17 10:55:42.862 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330958; id: 17; name: asmStats (2); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/a0/0d9d84b4af91e16c47bb82d34a1591 started: 1758099332899; exited: 2025-09-17T08:55:38Z; ]
+Sep-17 10:55:42.867 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330959; id: 16; name: asmStats (1); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/9d/61b301354d3ecea3d1d842540368b1 started: 1758099332901; exited: 2025-09-17T08:55:39Z; ]
+Sep-17 10:55:47.848 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331107; id: 23; name: asmStats (4); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/46/a2504b448ebce1ab81db5258d3edc8 started: 1758099342871; exited: 2025-09-17T08:55:46Z; ]
+Sep-17 10:55:52.847 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331106; id: 21; name: asmStats (3); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/4f/adaf32121fb7882d13f5a599db1e81 started: 1758099337860; exited: 2025-09-17T08:55:47Z; ]
+Sep-17 10:55:52.852 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331109; id: 24; name: asmStats (5); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/48/4673c346f810116c9d9da1bf2ffa37 started: 1758099342874; exited: 2025-09-17T08:55:48Z; ]
+Sep-17 10:55:52.856 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331111; id: 27; name: asmStats (6); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/6b/64f37154d65eb9f245102328fa88d6 started: 1758099342876; exited: 2025-09-17T08:55:48Z; ]
+Sep-17 10:55:52.862 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331113; id: 28; name: asmStats (7); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/a9/fb54e08e27b3903742ce8b89604ce3 started: 1758099342878; exited: 2025-09-17T08:55:50Z; ]
+Sep-17 10:55:52.870 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331115; id: 31; name: asmStats (8); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/5c/93122fe463d79e1a07a0e1f8a22164 started: 1758099342881; exited: 2025-09-17T08:55:50Z; ]
+Sep-17 10:55:52.875 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331117; id: 33; name: asmStats (9); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/59/ab2a6335b38885690ed2ecd9314b90 started: 1758099342884; exited: 2025-09-17T08:55:48Z; ]
+Sep-17 10:57:27.997 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331119; id: 35; name: merqury (2); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/06/ce2765cb76907df0c6b644e08a1b30 started: 1758099342886; exited: 2025-09-17T08:57:27Z; ]
+Sep-17 10:57:28.020 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331121; id: 36; name: merqury (3); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/1e/c15bc1fb74dfb8435ddbc3710126fb started: 1758099342890; exited: 2025-09-17T08:57:23Z; ]
+Sep-17 10:57:32.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331120; id: 34; name: merqury (1); status: COMPLETED; exit: 0; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/da/f2f8bdd571958f39b13c51acf2d80a started: 1758099342888; exited: 2025-09-17T08:57:29Z; ]
+Sep-17 10:59:12.912 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 9 -- submitted tasks are shown below
+~> TaskHandler[jobId: 12330960; id: 18; name: busco (1); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/2a/3a37cff854fa057a685304963af8b7 started: -; exited: -; ]
+~> TaskHandler[jobId: 12330961; id: 19; name: busco (2); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/cb/fa64dc49d839a3840842291a40a334 started: -; exited: -; ]
+~> TaskHandler[jobId: 12330962; id: 20; name: busco (3); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/d9/367d8abe43e1f86aee6c11b2024bcc started: -; exited: -; ]
+~> TaskHandler[jobId: 12331108; id: 22; name: busco (4); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/a1/4a98b3456e5e151713cf74563e2d07 started: -; exited: -; ]
+~> TaskHandler[jobId: 12331110; id: 26; name: busco (6); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/91/a460d6ba3d59e48df80a0877db9430 started: -; exited: -; ]
+~> TaskHandler[jobId: 12331112; id: 25; name: busco (5); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/2c/3ddb901d5dcbe2efe6c573eece4c4a started: -; exited: -; ]
+~> TaskHandler[jobId: 12331114; id: 29; name: busco (7); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/47/29e9132b8efb084054fdd75fd95859 started: -; exited: -; ]
+~> TaskHandler[jobId: 12331116; id: 30; name: busco (8); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/f4/8639fa1269ef29cd2461e594bdb1a5 started: -; exited: -; ]
+~> TaskHandler[jobId: 12331118; id: 32; name: busco (9); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/04/a763fc3850c1d0587bc485eec34795 started: -; exited: -; ]
+Sep-17 11:04:12.967 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 9 -- submitted tasks are shown below
+~> TaskHandler[jobId: 12330960; id: 18; name: busco (1); status: RUNNING; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/2a/3a37cff854fa057a685304963af8b7 started: 1758099842960; exited: -; ]
+~> TaskHandler[jobId: 12330961; id: 19; name: busco (2); status: RUNNING; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/cb/fa64dc49d839a3840842291a40a334 started: 1758099842969; exited: -; ]
+~> TaskHandler[jobId: 12330962; id: 20; name: busco (3); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/d9/367d8abe43e1f86aee6c11b2024bcc started: -; exited: -; ]
+~> TaskHandler[jobId: 12331108; id: 22; name: busco (4); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/a1/4a98b3456e5e151713cf74563e2d07 started: -; exited: -; ]
+~> TaskHandler[jobId: 12331110; id: 26; name: busco (6); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/91/a460d6ba3d59e48df80a0877db9430 started: -; exited: -; ]
+~> TaskHandler[jobId: 12331112; id: 25; name: busco (5); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/2c/3ddb901d5dcbe2efe6c573eece4c4a started: -; exited: -; ]
+~> TaskHandler[jobId: 12331114; id: 29; name: busco (7); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/47/29e9132b8efb084054fdd75fd95859 started: -; exited: -; ]
+~> TaskHandler[jobId: 12331116; id: 30; name: busco (8); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/f4/8639fa1269ef29cd2461e594bdb1a5 started: -; exited: -; ]
+~> TaskHandler[jobId: 12331118; id: 32; name: busco (9); status: SUBMITTED; exit: -; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/04/a763fc3850c1d0587bc485eec34795 started: -; exited: -; ]
+Sep-17 11:04:38.007 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330960; id: 18; name: busco (1); status: COMPLETED; exit: 1; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/2a/3a37cff854fa057a685304963af8b7 started: 1758099842960; exited: 2025-09-17T09:04:34Z; ]
+Sep-17 11:04:38.013 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330961; id: 19; name: busco (2); status: COMPLETED; exit: 1; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/cb/fa64dc49d839a3840842291a40a334 started: 1758099842969; exited: 2025-09-17T09:04:34Z; ]
+Sep-17 11:04:38.016 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12330962; id: 20; name: busco (3); status: COMPLETED; exit: 1; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/d9/367d8abe43e1f86aee6c11b2024bcc started: 1758099853000; exited: 2025-09-17T09:04:34Z; ]
+Sep-17 11:04:38.018 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 12331108; id: 22; name: busco (4); status: COMPLETED; exit: 1; error: -; workDir: /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/a1/4a98b3456e5e151713cf74563e2d07 started: 1758099863001; exited: 2025-09-17T09:04:34Z; ]
+Sep-17 11:04:38.058 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=busco (1); work-dir=/cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/2a/3a37cff854fa057a685304963af8b7
+  error [nextflow.exception.ProcessFailedException]: Process `busco (1)` terminated with an error exit status (1)
+Sep-17 11:04:38.293 [TaskFinalizer-7] ERROR nextflow.processor.TaskProcessor - Error executing process > 'busco (1)'
+
+Caused by:
+  Process `busco (1)` terminated with an error exit status (1)
+
+
+Command executed:
+
+  busco -i testsample.asm.bp.hap1.p_ctg.fa -o testsample.asm.bp.hap1.p_ctg.busco -l mammalia_odb12 -m genome -c 164
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  Traceback (most recent call last):
+    File "/cfs/klemming/projects/supr/snic2022-6-144/AXEL/software/miniforge/envs/assembly_env/bin/busco", line 19, in <module>
+      from busco import run_BUSCO
+    File "/cfs/klemming/projects/supr/snic2022-6-144/AXEL/software/miniforge/envs/assembly_env/lib/python3.12/site-packages/busco/run_BUSCO.py", line 20, in <module>
+      from busco.BuscoRunner import AnalysisRunner, BatchRunner, SingleRunner
+    File "/cfs/klemming/projects/supr/snic2022-6-144/AXEL/software/miniforge/envs/assembly_env/lib/python3.12/site-packages/busco/BuscoRunner.py", line 16, in <module>
+      from busco.analysis.BuscoAnalysis import BuscoAnalysis
+    File "/cfs/klemming/projects/supr/snic2022-6-144/AXEL/software/miniforge/envs/assembly_env/lib/python3.12/site-packages/busco/analysis/BuscoAnalysis.py", line 16, in <module>
+      from busco.BuscoConfig import BaseConfig, BuscoConfigAuto
+    File "/cfs/klemming/projects/supr/snic2022-6-144/AXEL/software/miniforge/envs/assembly_env/lib/python3.12/site-packages/busco/BuscoConfig.py", line 23, in <module>
+      from busco.BuscoDownloadManager import BuscoDownloadManager
+    File "/cfs/klemming/projects/supr/snic2022-6-144/AXEL/software/miniforge/envs/assembly_env/lib/python3.12/site-packages/busco/BuscoDownloadManager.py", line 23, in <module>
+      import pandas as pd
+    File "/cfs/klemming/home/a/axeljen/.local/lib/python3.12/site-packages/pandas/__init__.py", line 46, in <module>
+      from pandas.core.api import (
+    File "/cfs/klemming/home/a/axeljen/.local/lib/python3.12/site-packages/pandas/core/api.py", line 1, in <module>
+      from pandas._libs import (
+    File "/cfs/klemming/home/a/axeljen/.local/lib/python3.12/site-packages/pandas/_libs/__init__.py", line 18, in <module>
+      from pandas._libs.interval import Interval
+    File "interval.pyx", line 1, in init pandas._libs.interval
+  ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+Work dir:
+  /cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/2a/3a37cff854fa057a685304963af8b7
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Sep-17 11:04:38.337 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=busco (4); work-dir=/cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/a1/4a98b3456e5e151713cf74563e2d07
+  error [nextflow.exception.ProcessFailedException]: Process `busco (4)` terminated with an error exit status (1)
+Sep-17 11:04:38.339 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=busco (2); work-dir=/cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/cb/fa64dc49d839a3840842291a40a334
+  error [nextflow.exception.ProcessFailedException]: Process `busco (2)` terminated with an error exit status (1)
+Sep-17 11:04:38.342 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=busco (3); work-dir=/cfs/klemming/projects/supr/snic2022-6-144/AXEL/dev/nextflow/hifiasm_nf/work/d9/367d8abe43e1f86aee6c11b2024bcc
+  error [nextflow.exception.ProcessFailedException]: Process `busco (3)` terminated with an error exit status (1)
+Sep-17 11:04:38.344 [TaskFinalizer-7] DEBUG nextflow.Session - Session aborted -- Cause: Process `busco (1)` terminated with an error exit status (1)
+Sep-17 11:04:38.384 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Sep-17 11:04:38.385 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sep-17 11:04:38.385 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-17 11:04:38.405 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (5)
+Sep-17 11:04:38.494 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=27; failedCount=4; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=2; runningCount=-2; retriesCount=0; abortedCount=5; succeedDuration=10h 33m 1s; failedDuration=5h 1m; cachedDuration=0ms;loadCpus=-328; loadMemory=0; peakRunning=10; peakCpus=1148; peakMemory=0; ]
+Sep-17 11:04:38.667 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-17 11:04:38.769 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

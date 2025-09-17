@@ -8,18 +8,18 @@ process gfa2fa {
     cpus '1'
     time '1h'
     queue params.gfa2fa_queue
-
-    publishDir 'results/assemblies', mode: 'copy'
+//    conda params.main_conda
+    
+    publishDir "results/${sample}/assemblies", mode: 'copy'
 
     input:
        tuple val(sample), path(gfa)
 
     output:
-        tuple val(sample), path("${sample}/${gfa.baseName}.fa"), emit: fasta
+        tuple val(sample), path("${gfa.baseName}.fa"), emit: fasta
 
     script:
     """
-    mkdir -p ${sample}
-    gfa2fa.py ${gfa} ${sample}/${gfa.baseName}.fa
+    gfa2fa.py ${gfa} ${gfa.baseName}.fa
     """
 }

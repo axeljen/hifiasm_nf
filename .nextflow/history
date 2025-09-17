@@ -1,0 +1,51 @@
+2025-09-16 13:55:16	1m 38s	clever_swanson	ERR	a0ccad05dc73b6e1e6e67459f7628fef	3adefe08-d13d-4209-a2f1-93addb195a94	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv
+2025-09-16 13:57:58	1m 23s	gloomy_venter	ERR	a0ccad05dc73b6e1e6e67459f7628fef	38129ef8-12da-4e94-8107-c5e7ac07a73a	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv
+2025-09-16 14:00:20	4.1s	spontaneous_mahavira	ERR	a0ccad05dc73b6e1e6e67459f7628fef	d9831bfe-a992-4b6e-9fde-1376847b6c2d	nextflow run run_hifiasm.nf -profile standard --input_reads input_reads.csv
+2025-09-16 14:03:21	4.4s	jolly_cajal	ERR	a0ccad05dc73b6e1e6e67459f7628fef	fdd0d5c6-c4d7-40df-8eb9-c671d4db3c4a	nextflow run run_hifiasm.nf -profile standard --input_reads input_reads.csv
+2025-09-16 14:04:37	3.6s	reverent_pauling	ERR	a0ccad05dc73b6e1e6e67459f7628fef	bf5f10f4-fb7e-4326-9a46-97ada50925c8	nextflow run run_hifiasm.nf -profile standard --input_reads input_reads.csv
+2025-09-16 14:06:29	-	zen_monod	-	a0ccad05dc73b6e1e6e67459f7628fef	677f1ab2-74bd-4b3f-9ba5-6ff7ad5afbfd	nextflow run run_hifiasm.nf -profile standard --input_reads input_reads.csv
+2025-09-16 14:08:01	4.5s	irreverent_ekeblad	ERR	a0ccad05dc73b6e1e6e67459f7628fef	a204f973-8c79-4d1a-b7aa-a06be6207495	nextflow run run_hifiasm.nf -profile standard --input_reads input_reads.csv
+2025-09-16 14:09:45	4m 15s	condescending_watson	ERR	a0ccad05dc73b6e1e6e67459f7628fef	df90abab-bcd5-498c-8485-69efe5909be4	nextflow run run_hifiasm.nf -profile standard --input_reads input_reads.csv
+2025-09-16 14:16:22	3.8s	festering_meitner	ERR	a0ccad05dc73b6e1e6e67459f7628fef	eeb0a373-4097-4b35-8848-0f532ef0317c	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv
+2025-09-16 14:17:54	48s	hopeful_wing	ERR	a0ccad05dc73b6e1e6e67459f7628fef	0374c8af-5b19-461a-a27e-7eae89844899	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv
+2025-09-16 14:21:47	1m 23s	hopeful_blackwell	ERR	a0ccad05dc73b6e1e6e67459f7628fef	5dfd338f-5b48-4464-940d-36ca7ced03f4	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv
+2025-09-16 14:23:59	1m 53s	deadly_darwin	ERR	a0ccad05dc73b6e1e6e67459f7628fef	e11e8bb6-d5ab-406c-9034-3ef11274f519	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 14:31:54	4m 44s	serene_carson	ERR	a0ccad05dc73b6e1e6e67459f7628fef	3dc29e1f-287a-4d40-8237-6df256fb9a36	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 14:36:13	2m 23s	naughty_solvay	ERR	a0ccad05dc73b6e1e6e67459f7628fef	d0c1923b-f46a-4894-9b80-8a50c488310b	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 14:40:27	1m 4s	compassionate_curie	ERR	a0ccad05dc73b6e1e6e67459f7628fef	2d9cb89e-c75b-485d-8f0f-2533a9d5d35d	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 14:45:11	1m 38s	voluminous_feynman	ERR	a0ccad05dc73b6e1e6e67459f7628fef	bf2889be-e5f1-4965-b7b0-44c8f65b4509	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 14:48:35	8m 57s	cheeky_yalow	ERR	a0ccad05dc73b6e1e6e67459f7628fef	d195c565-1e4b-4b77-a92c-7cdf79766a91	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 14:57:48	-	agitated_woese	-	461b9498456b13210cb9dbc3eca580c1	308de806-5555-4186-844a-e3495b0e0eb9	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 14:58:32	1m 33s	determined_meitner	OK	fc91f8c4e720433205b85b8ee05fd023	233a9204-11e3-43dd-b36c-7cc14e7d80c2	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 15:09:09	8.2s	evil_lamarr	ERR	db13bc5675aa5e5949dcb38248f93e99	f9cb5ac4-66fe-478b-86dc-769750e68e2d	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 15:09:41	2m 38s	ridiculous_heisenberg	OK	db13bc5675aa5e5949dcb38248f93e99	84309712-a98d-4e06-8e9f-9668ff4c7160	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 15:24:12	34m 40s	pedantic_montalcini	ERR	27cdb7249a07de426df67bfe16d862de	74d2689a-f963-448f-b336-dd621f290465	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 15:59:13	11m 3s	jolly_albattani	OK	27cdb7249a07de426df67bfe16d862de	e5edee22-c776-4d22-accc-646baca8b6f4	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 16:38:09	7m 44s	romantic_linnaeus	ERR	27cdb7249a07de426df67bfe16d862de	0bbc94ef-014b-418e-810e-31a2e8f62ea6	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 16:53:19	1h 12m 9s	reverent_chandrasekhar	ERR	27cdb7249a07de426df67bfe16d862de	a2c3ce43-260a-4aa0-8ff9-56b59753d84a	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-16 18:52:16	9m 48s	ridiculous_pasteur	ERR	27cdb7249a07de426df67bfe16d862de	84c7a8bc-b917-4955-a3eb-091a49f8af4d	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-16 20:09:50	3m 43s	reverent_hypatia	ERR	27cdb7249a07de426df67bfe16d862de	be1a624c-5511-4c81-a064-338ad55e1ac6	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-16 20:34:32	4m 40s	admiring_agnesi	ERR	ab07ed388059b620421b4745de5f8005	8d7f4e10-f53d-4404-a295-647439012d0d	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-16 20:40:46	3m 35s	cheeky_mahavira	ERR	ab07ed388059b620421b4745de5f8005	4f9d6a4f-cdad-4306-8641-8204b269173a	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-16 20:51:58	10m 38s	wise_ardinghelli	ERR	ab07ed388059b620421b4745de5f8005	8ccbf75e-aa12-4ac4-a651-72b6a3809737	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-16 21:10:36	10m 4s	gigantic_cantor	OK	ab07ed388059b620421b4745de5f8005	d00dcd80-5741-45bb-a64f-3e5ac1826c89	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-16 21:21:36	1h 38m 37s	voluminous_curran	OK	ab07ed388059b620421b4745de5f8005	d90ba31f-b2a5-4422-bee4-ecc9b67e0056	nextflow run run_hifiasm.nf -profile slurm --input_reads input_reads.csv --resume
+2025-09-17 07:41:40	9m 45s	nauseous_picasso	OK	3d84c480361a8a52ea011629b58deba7	1478a010-f8f4-489b-bbf5-0f7a53a64af6	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 09:04:48	8m 43s	grave_turing	ERR	6c5ad04068fc2474be6f6efe7afb28cb	f006aaec-b65b-476f-a426-d7a02be06c77	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 09:26:37	-	adoring_boyd	-	1e4066a292b5e98792dae8133dff38e8	abaecceb-09ee-42c3-ba7b-33e3557ccabd	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 09:32:30	-	small_becquerel	-	e3839e0134a50ae5cb326170eca394f5	239efc5f-79ee-4a8e-a7c5-649e787f0826	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 09:33:22	4m 53s	distraught_cray	OK	3ab9347411dc216c5eba6f46694fe52c	3a0741d6-7da9-4d98-bb3b-f742df700de5	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 09:48:59	2m 3s	modest_brazil	ERR	c2738768f0889629084fd08c0caa1a41	57fccbd7-8ebf-4b3b-9102-e3bd140f3a99	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 10:04:39	3m 54s	sick_shirley	OK	3002db4bb3466a0b7ff24a2eb181fe53	0f08ffe3-49fc-410b-86d4-39e149a4d443	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 10:51:19	8.5s	dreamy_goldstine	ERR	7326d0af35b0eb0347af8395d62fe428	e6173a95-439c-4dbd-b84b-ce4b9c36d8fc	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 10:51:55	1m 18s	mad_bardeen	ERR	7326d0af35b0eb0347af8395d62fe428	3acc650b-d442-4727-9f88-ac9f103c73f7	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 10:54:05	10m 34s	desperate_bhabha	ERR	7326d0af35b0eb0347af8395d62fe428	9419a301-2514-4a87-bb8f-ad796c95dab0	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 11:28:44	1m 43s	confident_visvesvaraya	ERR	7326d0af35b0eb0347af8395d62fe428	a0627bee-d238-4829-8007-f35bb923d2a3	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 14:55:21	7m 21s	cranky_linnaeus	ERR	7326d0af35b0eb0347af8395d62fe428	3a654cbf-1878-41af-99bd-374efa94e668	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 15:03:05	1m 24s	wise_gilbert	ERR	7326d0af35b0eb0347af8395d62fe428	ddf0b0d4-8832-42e8-bb12-1ebf6e55f6b6	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 15:08:40	4m 8s	mighty_yalow	ERR	7326d0af35b0eb0347af8395d62fe428	11aeb829-9379-44a9-8ffb-21ec82e178e0	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 15:18:12	7.2s	serene_ardinghelli	ERR	7326d0af35b0eb0347af8395d62fe428	f1cc1485-766b-4241-a896-65fba94f3630	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 15:22:33	7.7s	loquacious_pesquet	ERR	7326d0af35b0eb0347af8395d62fe428	2bf45648-0373-4a48-bad9-c7ebee696608	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 15:23:15	6.5s	astonishing_becquerel	ERR	7326d0af35b0eb0347af8395d62fe428	2d6e3fb5-be21-4090-99a7-3cf8eade43aa	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 15:23:57	1m 54s	friendly_payne	ERR	7326d0af35b0eb0347af8395d62fe428	51c2f858-e2b7-488c-9ed7-f3f7fd650a29	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume
+2025-09-17 15:27:44	1m 24s	elated_payne	ERR	7326d0af35b0eb0347af8395d62fe428	9074d70e-f370-4ba8-9d87-f1ca18f76b4f	nextflow run run_hifiasm.nf -profile slurm --input_reads input_testreads.csv --resume

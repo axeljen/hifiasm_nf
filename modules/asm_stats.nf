@@ -8,19 +8,20 @@ process asmStats {
     cpus '1'
     time '1h'
     queue params.asmStats_queue
+//    conda params.main_conda
 
-    publishDir 'results/assemblies/', mode: 'copy'
+    publishDir "results/${sample}/assembly_stats", mode: 'copy'
 
     input:
        tuple val(sample), path(fasta)
 
     output:
-        path "${sample}/stats/${fasta.baseName}.stats.txt", emit: fasta
+        path "${fasta.baseName}.stats.txt", emit: fasta
 
     script:
 
     """
-    mkdir -p ${sample}/stats
-    asm_stats.py ${fasta} > ${sample}/stats/${fasta.baseName}.stats.txt
+    mkdir -p stats
+    asm_stats.py ${fasta} > ${fasta.baseName}.stats.txt
     """
 }

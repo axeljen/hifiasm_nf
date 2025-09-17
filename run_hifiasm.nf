@@ -4,7 +4,9 @@
 include { runHifiasm } from './modules/hifiasm.nf'
 include { gfa2fa } from './modules/gfa2fa.nf'
 include { asmStats } from './modules/asm_stats.nf'
-include { runCompleasm; downloadOdb } from './modules/compleasm.nf'
+include { merylCounts } from './modules/meryl.nf'
+include { merqury } from './modules/merqury.nf'
+include { busco } from './modules/busco.nf'
 
 workflow {
     // Define input channel
@@ -19,33 +21,36 @@ workflow {
             return [sample, reads, mode]
         }
 
-   assemblies_ch = runHifiasm(inreads_ch)
+    // run hifiasm to generate assemblies
+    assemblies_ch = runHifiasm(inreads_ch)
 
-    // there are lots of redundant files among those assemblies, 
-   // based on the file path endings
-   def suffixes = [
-            '.bp.p_ctg.gfa',
-            '.bp.hap1.p_ctg.gfa',
-            '.bp.hap2.p_ctg.gfa'
-        ]
+    // prepare a meryl db in parallel for all input reads
+    merylCounts(inreads_ch)
+
     gfas_ch = assemblies_ch.files
-        .collect()
-        .map { sample, files ->
-            def keep = files.findAll { f ->
-                def name = f.getFileName().toString()
-                suffixes.any { s -> name.endsWith(s) }
-            }
-            tuple(sample,keep)
-        }
-        .flatMap { sample, files ->
-            files.collect { f -> tuple(sample, f) }
-        }
+    .flatMap { item ->
+        def (sample, files) = item
+        files.collect { f -> tuple(sample, f) }
+    }
 
+    // convert gfa to fasta
     fasta_ch = gfa2fa(gfas_ch)
 
+    // run the assembly stats
     asmStats(fasta_ch)
 
-    // run the compleasm analysis
-    runCompleasm(fasta_ch)
+    // run merqury once per sample, a combined run with the diploid fasta files and a single run with the primaries will be performed
+    // group fasta files by sample
+    fasta_grouped_ch = fasta_ch
+        .groupTuple(by: 0)  // [ sample, [fa1, fa2, fa3] ]
+
+    // join fasta files with meryl dbs
+    merqury_in_ch = fasta_grouped_ch
+        .join(merylCounts.out.meryl_db, by: 0)  // join by sample name
+    // run merqury
+    merqury(merqury_in_ch)
+
+    // run busco completeness assessment
+    busco(fasta_ch)
 
 }
