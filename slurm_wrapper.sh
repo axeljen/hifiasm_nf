@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/bash -l
 
 #SBATCH -A naiss2025-22-471
 #SBATCH -p shared
 #SBATCH -n 1
-#SBATCH -t 1-00:00:00
+#SBATCH -t 6-00:00:00
 #SBATCH -J nf-asm
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=axel.jensen@ebc.uu.se
@@ -16,4 +16,9 @@ ml PDC/24.11 apptainer nextflow
 profile=slurm
 
 # run the workflow
-nextflow run run_hifiasm.nf -profile ${profile} --input_reads input_testreads.csv --resume
+nextflow run main.nf -profile ${profile} --input_reads input_reads_2025_11_26.csv -resume
+# nextflow run run_hifiasm.nf -profile ${profile} --input_reads input_reads_2025_11_26.csv -resume
+
+# nextflow run report.nf -profile ${profile} --input_reads input_reads_2025_11_26.csv -resume
+
+# nextflow run repeatmasker_report.nf -profile ${profile} --input_reads input_reads_2025_11_26.csv -resume
