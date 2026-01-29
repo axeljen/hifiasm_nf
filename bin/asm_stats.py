@@ -1,16 +1,20 @@
 #! /usr/bin/env python
 
 import sys
-# from Bio import bgzf
+import gzip
+
+if len(sys.argv) < 2:
+    print("Usage: asm_stats.py <assembly_file>", file=sys.stderr)
+    sys.exit(1)
 
 asm = sys.argv[1]
 
 def open_asm(asm):
-    return open(asm)
-    #if asm.endswith("gz"):
-     #   return bgzf.open(asm)
-    #else:
-     #   return open(asm)
+    #return open(asm)
+    if asm.endswith("gz"):
+        return gzip.open(asm, 'rt')
+    else:
+        return open(asm)
 
 def parse_asm(asm):
     scaffold_lengths = []
@@ -21,17 +25,23 @@ def parse_asm(asm):
             if line.startswith(">"):
                 if current_scaffold != "":
                     scaffold_lengths.append(len(current_scaffold))
-                    contigs = [seq for seq in current_scaffold.upper().split("N") if len(seq) > 0 and not seq == "N"]
+                    contigs = [seq for seq in current_scaffold.upper().split("N") if len(seq) > 0]
                     for contig in contigs:
                         contig_lengths.append(len(contig))
                 current_scaffold = ""
             else:
                 current_scaffold += line.strip()
+        # Don't forget the last scaffold
+        if current_scaffold != "":
+            scaffold_lengths.append(len(current_scaffold))
+            contigs = [seq for seq in current_scaffold.upper().split("N") if len(seq) > 0]
+            for contig in contigs:
+                contig_lengths.append(len(contig))
+    # sort lengths in descending order
+    scaffold_lengths = sorted(scaffold_lengths, reverse=True)
+    contig_lengths = sorted(contig_lengths, reverse=True)
     return scaffold_lengths, contig_lengths
 
-
-def get_lengths(asm):
-    return sorted([len(seq) for seq in asm.values()], reverse=True)
 
 def get_totlen(lengths):
     return sum(lengths)
@@ -53,6 +63,16 @@ def get_l50(lengths):
     for i, length in enumerate(lengths):
         running_total += length
         if running_total >= half:
+            return i + 1
+    return 0
+
+def get_l90(lengths):
+    total = get_totlen(lengths)
+    threshold = total * 0.9
+    running_total = 0
+    for i, length in enumerate(lengths):
+        running_total += length
+        if running_total >= threshold:
             return i + 1
     return 0
 
