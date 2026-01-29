@@ -16,7 +16,7 @@ process asmStats {
        tuple val(sample), path(fasta)
 
     output:
-        path "${fasta.baseName}.stats.txt", emit: fasta
+        tuple val(sample), path("${fasta.baseName}.stats.txt"), emit: fasta
 
     script:
 

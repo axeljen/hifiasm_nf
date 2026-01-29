@@ -20,8 +20,14 @@ process merqury {
 
     script:
     // Separate FASTAs into primary and haplotypes
-    def primary = fastas.find { it.name.endsWith('.p_ctg.fa') && !it.name.contains('hap') }
-    def haps    = fastas.findAll { it.name.endsWith('.hap1.p_ctg.fa') || it.name.endsWith('.hap2.p_ctg.fa') }
+    // Handle both .fa and .fa.gz extensions, and scaffolded assemblies
+    def primary = fastas.find {
+        (it.name.contains('.p_ctg') && !it.name.contains('hap')) ||
+        (it.name.contains('bp.p_ctg') && !it.name.contains('hap'))
+    }
+    def haps = fastas.findAll {
+        it.name.contains('hap1') || it.name.contains('hap2')
+    }
 
     // Build strings for command
     def primary_str = primary ? primary.toString() : ''

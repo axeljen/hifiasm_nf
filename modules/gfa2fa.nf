@@ -16,10 +16,14 @@ process gfa2fa {
        tuple val(sample), path(gfa)
 
     output:
-        tuple val(sample), path("${gfa.baseName}.fa"), emit: fasta
+        tuple val(sample), path("${gfa.baseName}.fa.gz"), emit: fasta
+        path("${gfa.baseName}.fa.gz.fai"), emit: fasta_index
 
     script:
     """
     gfa2fa.py ${gfa} ${gfa.baseName}.fa
+    # zip and index with samtools
+    bgzip ${gfa.baseName}.fa
+    samtools faidx ${gfa.baseName}.fa.gz
     """
 }

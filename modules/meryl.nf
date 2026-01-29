@@ -10,7 +10,7 @@ process merylCounts {
     queue params.merylCounts_queue
 //    conda params.main_conda
 
-    publishDir "results/$sample/meryl_db", mode: 'copy'
+    // publishDir "results/$sample/meryl_db", mode: 'copy'
 
     input:
        // using the reads channel here, we can ignore the mode though
